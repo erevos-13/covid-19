@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import * as actions from "../../store/actions";
 
 import { Form, DropdownButton, Dropdown } from "react-bootstrap";
+import "./SelectDrop.scss";
 
 const SelectDrop = () => {
   const dispatch = useDispatch();
@@ -33,7 +34,7 @@ const SelectDrop = () => {
   };
   const selectHandler = (item) => {
     console.log(item);
-    const findSelectCountry_ = countries.data.find((k_) => k_ = item);
+    const findSelectCountry_ = countries.data.find((k_) => k_.Country === item);
     setSelectCountry(findSelectCountry_.Country)
     dispatch(actions.getCountriesSelected(findSelectCountry_));
   };

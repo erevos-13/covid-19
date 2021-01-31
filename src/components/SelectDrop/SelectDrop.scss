@@ -1,0 +1,5 @@
+@import '../../styling';
+div.dropdown-menu.show{
+    max-height: calculateRem(200);
+    overflow-x: scroll;
+}

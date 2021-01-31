@@ -11,11 +11,13 @@ import createSagaMiddleware from "redux-saga";
 import { composeWithDevTools } from "redux-devtools-extension";
 import CountriesReducer from "./store/reducers/countries";
 import SummaryReducer from "./store/reducers/summary";
+import LiveByCountry from "./store/reducers/liveCountries"
 import { watchCountries } from "./store/saga/index";
 
 const rootReducer = combineReducers({
   countries: CountriesReducer,
-  summary: SummaryReducer
+  summary: SummaryReducer,
+  liveCountry: LiveByCountry
 });
 
 const sagaMiddleware = createSagaMiddleware();

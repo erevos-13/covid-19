@@ -13,3 +13,8 @@
     @extend .center-items-top;
     width: 100%;
 }
+.ChartCategory{
+    @extend .center-vertical;
+    width: 100%;
+    height: 100%;
+}

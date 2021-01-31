@@ -6,16 +6,23 @@ import PieChartComponent from "../../components/PieChardCountries/PieChartCountr
 import SelectDrop from "../../components/SelectDrop/SelectDrop";
 import "./HomePage.scss";
 import ListByCountries from "../../components/ListByCoutries/ListByCountries";
+import BarChartComponent from "../../components/BarChartComponent/BarChartComponent";
 
 const HomePage = () => {
+  const countries = useSelector((state) => state.countries);
   return (
     <React.Fragment>
       <HeaderComponent />
       <div className="HomepageContainer">
         <div className="HomePageSelectContainer">
-          <SelectDrop />
+          <ListByCountries />
         </div>
-        <ListByCountries />
+        <div className="ChartCategory">
+          <SelectDrop />
+          {countries.data.length > 0 ? (
+            <BarChartComponent country={(countries.selected)? countries.selected.Slug: 'greece'} />
+          ) : null}{" "}
+        </div>
       </div>
     </React.Fragment>
   );
