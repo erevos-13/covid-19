@@ -1,0 +1,9 @@
+@import "../../styling";
+
+.HeaderContainer{
+    @extend .center-items-space-between;
+    width: 100%;
+    padding: 0 calculateRem(10);
+
+
+}

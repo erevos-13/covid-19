@@ -1,0 +1,5 @@
+
+$initFontSize:10;
+@function calculateRem($size,$multiplier:1) {
+  @return   (($size*$multiplier)/$initFontSize)+rem;
+}

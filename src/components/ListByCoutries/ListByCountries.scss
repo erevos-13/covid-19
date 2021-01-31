@@ -1,0 +1,9 @@
+@import "../../styling";
+.ListContainer{
+
+}
+.GlobalContainer{
+    width: auto;
+    max-width: calculateRem(500);
+    height: calculateRem(150);
+}

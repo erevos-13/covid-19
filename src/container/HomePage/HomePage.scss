@@ -1,0 +1,15 @@
+@import "../../styling";
+.HomepageContainer{
+    @extend .center-items;
+    width: 100%;
+
+}
+.HomePageSelectContainer{
+    padding: calculateRem(10);
+
+}
+
+.HomePageListByCountry{
+    @extend .center-items-top;
+    width: 100%;
+}

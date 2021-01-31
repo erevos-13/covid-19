@@ -1,0 +1,89 @@
+.center-items {
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(center);
+    @include align-content(center);
+  }
+  .center-items-space-between{
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(space-between);
+  }
+  .center-items-end {
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(flex-end);
+  }
+
+  .center-items-start {
+    @include flexbox;
+    @include align-items(center);
+    @include justify-content(flex-start);
+  }
+  .center-items-wrap{
+    @include flexbox;
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include align-items(flex-start);
+    @include justify-content(flex-start);
+    
+  }
+  .center-items-top {
+    @include flexbox;
+    @include align-items(flex-start);
+    @include justify-content(flex-start);
+    @include align-content(center);
+    
+  }
+  
+  
+
+  // vertical
+  .center-vertical {
+    @include flexbox;
+    @include align-items(center);
+    @include flex-direction(column);
+    @include justify-content(center);
+  }
+  .center-vertical-space-between {
+    @include flexbox;
+    @include flex-direction(column);
+    @include justify-content(space-between);
+    @include align-items(center);
+    @include align-content(space-between);
+  }
+  .center-vertical-space-between-start {
+    @include flexbox;
+    @include flex-direction(column);
+    @include justify-content(space-between);
+    @include align-items(flex-start);
+    @include align-content(space-between);
+  }
+ 
+  .center-vertical-items{
+    @include flexbox;
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(center);
+  }
+
+  .center-vertical-items-top{
+    @include flexbox;
+    @include flex-direction(column);
+    @include align-items(flex-start);
+    @include justify-content(center);
+  }
+
+  .center-vertical-top{
+    @include flexbox;
+    @include flex-direction(row);
+    @include align-items(flex-start);
+    @include justify-content(center);
+  }
+  .center-vertical-start{
+    @include flexbox;
+    @include flex-direction(column);
+    @include align-items(flex-start);
+    @include justify-content(center);
+  }
+  
