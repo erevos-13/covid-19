@@ -7,6 +7,7 @@ import SelectDrop from "../../components/SelectDrop/SelectDrop";
 import "./HomePage.scss";
 import ListByCountries from "../../components/ListByCoutries/ListByCountries";
 import BarChartComponent from "../../components/BarChartComponent/BarChartComponent";
+import ListOfCountries from "../../components/ListOfCountries/ListOfCountries";
 
 const HomePage = () => {
   const countries = useSelector((state) => state.countries);
@@ -23,6 +24,7 @@ const HomePage = () => {
             <BarChartComponent country={(countries.selected)? countries.selected.Slug: 'greece'} />
           ) : null}{" "}
         </div>
+        <ListOfCountries  />
       </div>
     </React.Fragment>
   );

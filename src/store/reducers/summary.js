@@ -2,7 +2,7 @@ import * as actionTypes from '../actions';
 import {updateObject} from '../../shared/Utils';
 const initialState  = {
     error: null,
-    data: [],
+    data: null,
     loading: false
 
 }
@@ -12,10 +12,10 @@ const getSummarySuccess = (state, action) => {
 }
 
 const getSummaryFail = (state, action) => {
-    return updateObject(state, {data: [],error: action.error, loading: false})
+    return updateObject(state, {data: null,error: action.error, loading: false})
 }
 const getSummaryStart = (state, action) => {
-    return updateObject(state, {data: [],error: null, loading: true})
+    return updateObject(state, {data: null,error: null, loading: true})
 }
 const reducer = ( state = initialState, action ) => {
     switch ( action.type ) {

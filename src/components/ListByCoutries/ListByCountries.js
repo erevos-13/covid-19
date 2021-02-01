@@ -35,7 +35,7 @@ const ListByCountries = () => {
   return (
     <div className="ListContainer">
       <div className="GlobalContainer">
-        {summary.data.length === 0 ? null : summaryGlobal()}
+        {!summary.data ? null : summaryGlobal()}
       </div>
     </div>
   );
