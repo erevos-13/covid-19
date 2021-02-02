@@ -2,17 +2,16 @@
 .HomepageContainer{
     @extend .center-vertical;
     width: 100%;
+    padding: 0 calculateRem(10)
 
 }
 .HomePageSelectContainer{
+    @extend .center-items;
+    width: 100%;
     padding: calculateRem(10);
 
 }
 
-.HomePageListByCountry{
-    @extend .center-items-top;
-    width: 100%;
-}
 .ChartCategory{
     @extend .center-vertical;
     width: 100%;
