@@ -13,14 +13,6 @@ import {
 } from "recharts";
 import * as actions from "./../../store/actions";
 
-const data = [
-  {
-    name: "Date",
-    Confirmed: 4000,
-    Deaths: 2400,
-    amt: 2400,
-  },
-];
 
 const BarChartComponent = ({ country }) => {
   const dispatch = useDispatch();
@@ -39,7 +31,7 @@ const BarChartComponent = ({ country }) => {
   return (
     <BarChart
       width={600}
-      height={500}
+      height={300}
       data={liveCountry_.data}
       margin={{
         top: 0,

@@ -14,7 +14,7 @@ const HomePage = (props) => {
   const countries = useSelector((state) => state.countries);
 
   const handlerClick = (item) => {
-    props.history.push(`country/${item.Slug}`);
+    props.history.push(`country/${item.CountryCode}`);
   };
   return (
     <React.Fragment>
@@ -29,17 +29,19 @@ const HomePage = (props) => {
           justify="space-between"
           alignItems="center"
         >
-          <Box component="span" >
+          <div className="ListOfCountries" >
             <ListOfCountries onSelectCountry={handlerClick} />
-          </Box>
-          <div>
+          </div>
+          <div className="GraphContainer">
             <Grid
               container
               direction="column"
-              justify="flex-start"
+              justify="center"
               alignItems="center"
+
             >
               <SelectDrop />
+              <br/>
               {countries.data.length > 0 ? (
                 <BarChartComponent
                   country={

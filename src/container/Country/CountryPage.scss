@@ -3,3 +3,19 @@
     height: calculateRem(200);
     width: auto;
 }
+p{
+    font-weight: bold;
+}
+.recover{
+    font-size: 20px;
+    color: rgba(0, 128, 0, 0.699);
+    
+}
+.deaths{
+    font-size: 20px;
+    color: rgba(255, 0, 0, 0.767);
+}
+.date{
+    font-size: 15px;
+    color: gray;
+}

@@ -14,7 +14,6 @@ import Flag from 'react-world-flags'
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
-    maxWidth: 360,
     maxHeight: 330,
     overflowY: "scroll",
     border: '1px solid gray',

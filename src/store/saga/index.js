@@ -8,6 +8,6 @@ export function* watchCountries() {
   yield all([
     takeLatest(actionsTypes.ACTION_GET_COUNTRY_SAGA, getCountries),
     takeEvery(actionsTypes.ACTION_GET_SUMMARY_SAGA, getSummary),
-    takeLatest(actionsTypes.ACTION_GET_SAGA_COUNTRY_LIVE, getByCountriesLive),
+    takeEvery(actionsTypes.ACTION_GET_SAGA_COUNTRY_LIVE, getByCountriesLive),
   ]);
 }

@@ -17,3 +17,13 @@ export function* getSummary() {
       console.log(summary_)
   } catch {}
 }
+
+
+export function* getTotalByCountry(action) {
+  try {
+    const country = action.country;
+    const status = action.status;
+      const totalOfCountryDeaths_ = yield instance.get(`/total/country/${country}/status/deaths`);
+      const totalOfCountryConfirmed_ = yield instance.get(`/total/country/${country}/status/confirmed`);
+  } catch {}
+}
