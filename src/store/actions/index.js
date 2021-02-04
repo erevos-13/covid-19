@@ -11,7 +11,7 @@ export {
   ACTION_GET_SUCCESS_COUNTRY_LIVE,
   ACTION_GET_SAGA_COUNTRY_TOTAL,
   ACTION_GET_SUCCESS_COUNTRY_TOTAL,
-  ACTION_GET_FAIL_COUNTRY_TOTAL
+  ACTION_GET_FAIL_COUNTRY_TOTAL,
 } from "./ActionsTypes";
 
 export {
@@ -21,7 +21,7 @@ export {
   getCountriesSelected,
   getTotalOFCountryFail,
   getTotalOFCountrySaga,
-  getTotalOFCountrySuccess
+  getTotalOFCountrySuccess,
 } from "./countries";
 
 export { getSummaryFail, getSummarySaga, getSummarySuccess } from "./summary";
@@ -31,3 +31,9 @@ export {
   getByCountryLiveSaga,
   getByCountryLiveSuccess,
 } from "./liveCountries";
+
+export {
+  getCountriesTotal,
+  getCountriesTotalFail,
+  getCountriesTotalSuccess,
+} from "./countrySelected";

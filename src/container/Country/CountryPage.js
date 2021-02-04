@@ -22,6 +22,7 @@ import {
 import * as actions from "../../store/actions";
 
 import "./CountryPage.scss";
+import ListByStatus from "../../components/ListByStatus/ListByStatus";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -35,6 +36,7 @@ const CountryPage = (props) => {
   const dispatch = useDispatch();
   const countriesSummary = useSelector((state) => state.summary);
   const countryLive_ = useSelector((state) => state.liveCountry);
+  const totalByStats_ = useSelector((state) => state.selectedCountry);
   let { countryId } = useParams();
   const countrySelected = countriesSummary?.data.Countries.find(
     (c_) => c_.CountryCode === countryId
@@ -47,7 +49,7 @@ const CountryPage = (props) => {
     // Update the document title using the browser API
 
     dispatch(
-      actions.getByCountryLiveSaga(countrySelected.Country, "confirmed")
+      actions.getCountriesTotal(countrySelected.Country)
     );
     console.log("Bar chart component",countryLive_ );
   }, [dispatch, countrySelected]);
@@ -110,6 +112,24 @@ const CountryPage = (props) => {
             </LineChart>
           </Box>
         )}
+
+      </Grid>
+      <Grid
+        container
+        direction="row"
+        justify="center"
+        alignItems="center"
+      >
+        {(totalByStats_.data)? 
+        <React.Fragment>
+        <ListByStatus stats={totalByStats_.data.totalDeath} />
+        <ListByStatus stats={totalByStats_.data.totalRecovered} />
+        <ListByStatus stats={totalByStats_.data.totalConfirm} />
+
+        </React.Fragment>
+        : null}
+      
+
       </Grid>
     </Container>
   );
