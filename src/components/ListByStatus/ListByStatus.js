@@ -7,7 +7,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import Avatar from "@material-ui/core/Avatar";
 import ImageIcon from "@material-ui/icons/Image";
-import Flag from 'react-world-flags'
+import Flag from "react-world-flags";
 import * as moment from "moment";
 
 const useStyles = makeStyles((theme) => ({
@@ -15,20 +15,17 @@ const useStyles = makeStyles((theme) => ({
     width: 350,
     maxHeight: 330,
     overflowY: "scroll",
-    border: '1px solid gray',
+    border: "1px solid gray",
     backgroundColor: theme.palette.background.paper,
   },
   avatarNone: {
-    backgroundColor: 'transparent'
-  }
+    backgroundColor: "transparent",
+  },
 }));
 
-export default function ListByStatus({stats}) {
+export default function ListByStatus({ stats, title }) {
   const classes = useStyles();
-  console.log(stats)
-
-
-
+  console.log(stats);
 
   const list_ = (items) => {
     return items.map((item, index) => {
@@ -36,22 +33,24 @@ export default function ListByStatus({stats}) {
         <ListItem key={index}>
           <ListItemAvatar>
             <Avatar variant="rounded" className={classes.avatarNone}>
-              <Flag code={item.CountryCode}/>
+              <Flag code={item.CountryCode} />
             </Avatar>
           </ListItemAvatar>
           <ListItemText
-            primary={moment(item.Date).format("YYYY-MM-DD") }
+            primary={moment(item.Date).format("YYYY-MM-DD")}
             secondary={`Cases: ${item.Cases}`}
           />
-          
         </ListItem>
       );
     });
   };
 
   return (
-    <List className={classes.root}>
-      {stats ? list_(stats) : "No Stats found"}
-    </List>
+    <React.Fragment>
+      <List className={classes.root}>
+        <h3>{title}</h3>
+        {stats ? list_(stats) : "No Stats found"}
+      </List>
+    </React.Fragment>
   );
 }

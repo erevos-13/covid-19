@@ -122,9 +122,9 @@ const CountryPage = (props) => {
       >
         {(totalByStats_.data)? 
         <React.Fragment>
-        <ListByStatus stats={totalByStats_.data.totalDeath} />
-        <ListByStatus stats={totalByStats_.data.totalRecovered} />
-        <ListByStatus stats={totalByStats_.data.totalConfirm} />
+        <ListByStatus stats={totalByStats_.data.totalDeath} title={"Total Deaths"} />
+        <ListByStatus stats={totalByStats_.data.totalRecovered}  title={"Total Recovered"} />
+        <ListByStatus stats={totalByStats_.data.totalConfirm}  title={"Total Confirm"} />
 
         </React.Fragment>
         : null}
