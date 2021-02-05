@@ -2,7 +2,7 @@
 
 This Project is created from CRP and use the postman api fro Covid-19. 
 
-Is a simple project with redux saga.
+Is a simple project with redux saga, recharts.
 
 ## Available Scripts
 
