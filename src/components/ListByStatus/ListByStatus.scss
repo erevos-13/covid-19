@@ -1,0 +1,9 @@
+@import "../../styling";
+
+.ListByCountryContainer{
+    @extend .center-vertical;
+
+    .Title{
+        text-align: center;
+    }
+}

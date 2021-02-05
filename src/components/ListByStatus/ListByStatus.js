@@ -9,6 +9,7 @@ import Avatar from "@material-ui/core/Avatar";
 import ImageIcon from "@material-ui/icons/Image";
 import Flag from "react-world-flags";
 import * as moment from "moment";
+import { Box } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -46,11 +47,11 @@ export default function ListByStatus({ stats, title }) {
   };
 
   return (
-    <React.Fragment>
+    <div className="ListByCountryContainer">
+      <h3 className="Title">{title}</h3>
       <List className={classes.root}>
-        <h3>{title}</h3>
         {stats ? list_(stats) : "No Stats found"}
       </List>
-    </React.Fragment>
+    </div>
   );
 }
